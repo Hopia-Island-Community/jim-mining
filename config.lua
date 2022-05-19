@@ -10,7 +10,7 @@ Config = {
 	PropSpawn = true, -- Enable Ore Props
 	Pedspawn = true, -- Do you want to spawn peds for main locations?
 	img = "qb-inventory/html/images/", --Set this to the image directory of your inventory script
-	Lan = "en", -- Pick your language here
+	Lan = "fr", -- Pick your language here
 }
 
 -- Each one has individual blip enablers
