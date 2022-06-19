@@ -8,7 +8,7 @@ Config = {
 	Blips = true, -- Enable Blips?
 	BlipNamer = false, -- Enable to Name Blips different things, disable if you already have too many blips as this will group them together
 	PropSpawn = true, -- Enable Ore Props
-	Pedspawn = true, -- Do you want to spawn peds for main locations?
+	Pedspawn = false, -- Do you want to spawn peds for main locations?
 	img = "qb-inventory/html/images/", --Set this to the image directory of your inventory script
 	Lan = "fr", -- Pick your language here
 }
