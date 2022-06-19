@@ -134,44 +134,46 @@ Config.MineLights = {
 ------------------------------------------------------------
 --Mining Store Items
 Config.Items = {
-    label = "Mining Store",  slots = 7,
-    items = {
-	--[1] = { name = "water_bottle", price = 0, amount = 100, info = {}, type = "item", slot = 1, },
-	--[2] = { name = "sandwich", price = 0, amount = 250, info = {}, type = "item", slot = 2, },
-	--[3] = { name = "bandage", price = 0, amount = 100, info = {}, type = "item", slot = 3, },
-	[4] = { name = "weapon_flashlight", price = 0, amount = 0, info = {}, type = "item", slot = 4, },
-	--[5] = { name = "drill",	price = 0, amount = 100, info = {}, type = "item", slot = 5, },
-	--[6] = { name = "handdrill",	price = 0, amount = 100, info = {}, type = "item",	slot = 6, },
-	--[7] = { name = "drillbit", price = 0, amount = 100,	info = {}, type = "item", slot = 7, }, }
+label = "Mining Store", slots = 7,
+items = {
+--[1] = { name = "water_bottle", price = 0, amount = 100, info = {}, type = "item", slot = 1, },
+--[2] = { name = "sandwich", price = 0, amount = 250, info = {}, type = "item", slot = 2, },
+--[3] = { name = "bandage", price = 0, amount = 100, info = {}, type = "item", slot = 3, },
+--[4] = { name = "weapon_flashlight", price = 0, amount = 0, info = {}, type = "item", slot = 4, },
+--[5] = { name = "drill",	price = 0, amount = 100, info = {}, type = "item", slot = 5, },
+--[6] = { name = "handdrill",	price = 0, amount = 100, info = {}, type = "item",	slot = 6, },
+--[7] = { name = "drillbit", price = 0, amount = 100,	info = {}, type = "item", slot = 7, }, }
+
+}
 }
 
 Crafting = {}
 Crafting.SmeltMenu = {
-	[1] = { ["copper"] 	 = { ["copperore"] 	= 1 }, ['amount'] = 4 },
-	[2] = { ["iron"] 	 = { ["ironore"] 	= 1 } },
-	[3] = { ["steel"] 	 = { ["ironore"] 	= 1, ["carbon"] = 1 } },
-	[4] = { ["goldbar"]  = { ["goldore"] 	= 1 } },
-	[5] = { ["goldbar"]  = { ["gold_ring"] 	= 4 } },
-	[6] = { ["aluminum"] = { ["aluminumoxide"] = 2, }, ['amount'] = 1 },
+	[1] = { ["copper"] 	 = { ["copperore"] 		= 1 }, ['amount'] = 4 },
+	[2] = { ["iron"] 	 = { ["ironore"] 		= 1 } },
+	[3] = { ["steel"] 	 = { ["ironore"] 		= 1, ["carbon"] = 1 } },
+	[4] = { ["goldbar"]  = { ["goldore"] 		= 1 } },
+	[5] = { ["goldbar"]  = { ["gold_ring"] 		= 4 } },
+	[6] = { ["aluminum"] = { ["aluminumoxide"] 	= 2, }, ['amount'] = 1 },
 }
 Crafting.GemCut = {
-	[1] = { ["emerald"] = { ["uncut_emerald"] = 1, } },
-	[2] = { ["diamond"] = { ["uncut_diamond"] = 1}, },
-	[3] = { ["ruby"] = { ["uncut_ruby"] = 1 }, },
+	[1] = { ["emerald"]  = { ["uncut_emerald"]  = 1, } },
+	[2] = { ["diamond"]  = { ["uncut_diamond"]  = 1}, },
+	[3] = { ["ruby"] 	 = { ["uncut_ruby"] 	= 1 }, },
 	[4] = { ["sapphire"] = { ["uncut_sapphire"] = 1 }, },
 }
 Crafting.RingCut = {
-	[1] = { ["gold_ring"] = { ["goldbar"] = 1 }, ['amount'] = 3 },
-	[2] = { ["diamond_ring"] = { ["gold_ring"] = 1, ["diamond"] = 1 }, },
-	[3] = { ["emerald_ring"] = { ["gold_ring"] = 1, ["emerald"] = 1 }, },
-	[4] = { ["ruby_ring"] = { ["gold_ring"] = 1, ["ruby"] = 1 }, },
+	[1] = { ["gold_ring"] 	  = { ["goldbar"] 	= 1 }, ['amount'] = 3 },
+	[2] = { ["diamond_ring"]  = { ["gold_ring"] = 1, ["diamond"] = 1 }, },
+	[3] = { ["emerald_ring"]  = { ["gold_ring"] = 1, ["emerald"] = 1 }, },
+	[4] = { ["ruby_ring"] 	  = { ["gold_ring"] = 1, ["ruby"] = 1 }, },
 	[5] = { ["sapphire_ring"] = { ["gold_ring"] = 1, ["sapphire"] = 1 }, },
 }
 Crafting.NeckCut = {
-	[1] = { ["goldchain"] = { ["goldbar"] = 1 }, ['amount'] = 3  },
-	[2] = { ["10kgoldchain"] = { ["goldbar"] = 1 }, ['amount'] = 2 },
-	[3] = { ["diamond_necklace"] = { ["goldchain"] = 1, ["diamond"] = 1 }, },
-	[4] = { ["ruby_necklace"] = { ["goldchain"] = 1, ["ruby"] = 1 }, },
+	[1] = { ["goldchain"] 	 	  = { ["goldbar"] 	= 1 }, ['amount'] = 3  },
+	[2] = { ["10kgoldchain"] 	  = { ["goldbar"] 	= 1 }, ['amount'] = 2 },
+	[3] = { ["diamond_necklace"]  = { ["goldchain"] = 1, ["diamond"] = 1 }, },
+	[4] = { ["ruby_necklace"] 	  = { ["goldchain"] = 1, ["ruby"] = 1 }, },
 	[5] = { ["sapphire_necklace"] = { ["goldchain"] = 1, ["sapphire"] = 1 }, },
-	[6] = { ["emerald_necklace"] = { ["goldchain"] = 1, ["emerald"] = 1 }, },
+	[6] = { ["emerald_necklace"]  = { ["goldchain"] = 1, ["emerald"] = 1 }, },
 }
