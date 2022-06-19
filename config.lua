@@ -16,7 +16,7 @@ Config = {
 -- Each one has individual blip enablers
 Config.Locations =  {
 	['Mine'] = { name = "Mine", location = vector4(-594.96, 2091.3, 131.47-1.03, 67.65), blipTrue = true }, -- The location where you enter the mine 
-	['Quarry'] = { name = "Quarry", location = vector4(2960.9, 2754.14, 43.71-1.03, 204.58), blipTrue = true }, -- The location where you enter the mine 
+	['Quarry'] = { name = "Carrière", location = vector4(2960.9, 2754.14, 43.71-1.03, 204.58), blipTrue = true }, -- The location where you enter the mine
 	['Smelter'] = {	name = "Smelter", location = vector3(1112.29, -2009.9, 31.46), blipTrue = true }, -- The location of the smelter
 	['Cracking'] = { name = "Stone Cracking", location = vector4(1109.19, -1992.8, 30.98-1.03, 56.88), blipTrue = false }, -- The location of the smelter
 	['Buyer'] = { name = "Ore Buyer", location = vector4(1085.57, -2001.11, 31.4-1.03, 317.12), blipTrue = false }, -- The Location of the ore buyer
@@ -75,15 +75,15 @@ Config.SellItems = { -- Selling Prices
 	['diamond'] = 100,
 	['sapphire'] = 100,
 
-	['diamond_ring'] = 100,
-	['emerald_ring'] = 100,
-	['ruby_ring'] = 100,
-	['sapphire_ring'] = 100,
+	['diamond_ring'] = 1000,
+	['emerald_ring'] = 1000,
+	['ruby_ring'] = 1000,
+	['sapphire_ring'] = 1000,
 
-	['diamond_necklace'] = 100,
-	['emerald_necklace'] = 100,
-	['ruby_necklace'] = 100,
-	['sapphire_necklace'] = 100,
+	['diamond_necklace'] = 1000,
+	['emerald_necklace'] = 1000,
+	['ruby_necklace'] = 1000,
+	['sapphire_necklace'] = 1000,
 
 	['gold_ring'] = 100,
 	['goldchain'] = 100,
@@ -125,13 +125,13 @@ Config.MineLights = {
 Config.Items = {
     label = "Mining Store",  slots = 7,
     items = {
-	[1] = { name = "water_bottle", price = 0, amount = 100, info = {}, type = "item", slot = 1, },
-	[2] = { name = "sandwich", price = 0, amount = 250, info = {}, type = "item", slot = 2, },
-	[3] = { name = "bandage", price = 0, amount = 100, info = {}, type = "item", slot = 3, },
-	[4] = { name = "weapon_flashlight", price = 0, amount = 100, info = {}, type = "item", slot = 4, }, 
-	[5] = { name = "drill",	price = 0, amount = 100, info = {}, type = "item", slot = 5, }, 
-	[6] = { name = "handdrill",	price = 0, amount = 100, info = {}, type = "item",	slot = 6, },
-	[7] = { name = "drillbit", price = 0, amount = 100,	info = {}, type = "item", slot = 7, }, }		
+	--[1] = { name = "water_bottle", price = 0, amount = 100, info = {}, type = "item", slot = 1, },
+	--[2] = { name = "sandwich", price = 0, amount = 250, info = {}, type = "item", slot = 2, },
+	--[3] = { name = "bandage", price = 0, amount = 100, info = {}, type = "item", slot = 3, },
+	[4] = { name = "weapon_flashlight", price = 0, amount = 0, info = {}, type = "item", slot = 4, },
+	--[5] = { name = "drill",	price = 0, amount = 100, info = {}, type = "item", slot = 5, },
+	--[6] = { name = "handdrill",	price = 0, amount = 100, info = {}, type = "item",	slot = 6, },
+	--[7] = { name = "drillbit", price = 0, amount = 100,	info = {}, type = "item", slot = 7, }, }
 }
 
 Crafting = {}
@@ -143,8 +143,9 @@ Crafting.SmeltMenu = {
 	[5] = { ["goldbar"] = { ["gold_ring"] = 4 } },
 	[6] = { ["iron"] = { ["ironore"] = 1 } },
 	[7] = { ["steel"] = { ["ironore"] = 1, ["carbon"] = 1 } },
-	--[8] = { ["aluminum"] = { ["can"] = 2, }, ['amount'] = 3 },
-	--[9] = { ["glass"] = { ["bottle"] = 3, }, ['amount'] = 2 },
+	[8] = { ["aluminum"] = { ["can"] = 2, }, ['amount'] = 3 },
+	[8] = { ["aluminum"] = { ["aluminumoxide"] = 2, }, ['amount'] = 1 },
+	[9] = { ["glass"] = { ["bottle"] = 3, }, ['amount'] = 2 },
 }
 Crafting.GemCut = {
 	[1] = { ["emerald"] = { ["uncut_emerald"] = 1, } },
