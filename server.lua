@@ -59,11 +59,11 @@ end)
 RegisterServerEvent('jim-mining:CrackReward', function()
 	local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    Player.Functions.RemoveItem('stone', 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["stone"], "remove", 1)
-	for i = 1, math.random(1,3) do
+    Player.Functions.RemoveItem('stone', 2)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["stone"], "remove", 2)
+	for i = 1, math.random(1,2) do
 		local randItem = Config.RewardPool[math.random(1, #Config.RewardPool)]
-		amount = math.random(1, 2)
+		amount = math.random(1, 3)
 		Player.Functions.AddItem(randItem, amount)
 		TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[randItem], 'add', amount)
 	end

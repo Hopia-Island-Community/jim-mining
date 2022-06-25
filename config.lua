@@ -61,10 +61,12 @@ Config.RewardPool = {
 	[3] = "goldore",
 	[4] = "ironore",
 	[5] = "metalscrap",
-	[6] = 'uncut_ruby',
-	[7] = 'uncut_emerald',
-	[8] = 'uncut_diamond',
-	[9] = 'uncut_sapphire',
+	[6] = "aluminumoxide",
+	[7] = "ironoxide",
+	[8] = 'uncut_ruby',
+	[9] = 'uncut_emerald',
+	[10] = 'uncut_diamond',
+	[11] = 'uncut_sapphire',
 }
 
 ------------------------------------------------------------
@@ -149,12 +151,13 @@ items = {
 
 Crafting = {}
 Crafting.SmeltMenu = {
-	[1] = { ["copper"] 	 = { ["copperore"] 		= 1 }, ['amount'] = 4 },
-	[2] = { ["iron"] 	 = { ["ironore"] 		= 1 } },
-	[3] = { ["steel"] 	 = { ["ironore"] 		= 1, ["carbon"] = 1 } },
-	[4] = { ["goldbar"]  = { ["goldore"] 		= 1 } },
-	[5] = { ["goldbar"]  = { ["gold_ring"] 		= 4 } },
-	[6] = { ["aluminum"] = { ["aluminumoxide"] 	= 2, }, ['amount'] = 1 },
+	[1] = { ["copper"]   = { ["copperore"] = 1 }, ['amount'] = 4 },
+	[2] = { ["iron"] 	 = { ["ironore"] = 1 } },
+	[3] = { ["steel"] 	 = { ["metalscrap"] = 2, ["carbon"] = 1 } },
+	[4] = { ["aluminum"] = { ["aluminumoxide"] = 2, }, ['amount'] = 1 },
+	[5] = { ["iron"] 	 = { ["ironoxide"] = 2, }, ['amount'] = 1 },
+	[6] = { ["goldbar"]  = { ["goldore"] = 1 } },
+	[7] = { ["goldbar"]  = { ["gold_ring"] = 4 } },
 }
 Crafting.GemCut = {
 	[1] = { ["emerald"]  = { ["uncut_emerald"]  = 1, } },
