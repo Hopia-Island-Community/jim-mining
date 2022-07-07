@@ -75,6 +75,7 @@ Config.SellItems = { -- Selling Prices
 	['goldore'] = 100,
 	['ironore'] = 100,
 	['carbon'] = 100,
+	['copper'] = 100,
 	
 	['goldbar'] = 100,
 	
