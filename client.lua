@@ -294,7 +294,7 @@ RegisterNetEvent('jim-mining:SellOre', function()
 		{ header = "<img src=nui://"..Config.img..QBCore.Shared.Items["copperore"].image.." width=30px>"..Loc[Config.Lan].info["copper_ore"], txt = Loc[Config.Lan].info["sell_all"].." "..Config.SellItems['copperore'].." "..Loc[Config.Lan].info["sell_each"], params = { event = "jim-mining:SellAnim", args = 'copperore' } },
 		{ header = "<img src=nui://"..Config.img..QBCore.Shared.Items["ironore"].image.." width=30px>"..Loc[Config.Lan].info["iron_ore"], txt = Loc[Config.Lan].info["sell_all"].." "..Config.SellItems['ironore'].." "..Loc[Config.Lan].info["sell_each"], params = { event = "jim-mining:SellAnim", args = 'ironore' } },
 		{ header = "<img src=nui://"..Config.img..QBCore.Shared.Items["goldore"].image.." width=30px>"..Loc[Config.Lan].info["gold_ore"], txt = Loc[Config.Lan].info["sell_all"].." "..Config.SellItems['goldore'].." "..Loc[Config.Lan].info["sell_each"], params = { event = "jim-mining:SellAnim", args = 'goldore' } },
-		{ header = "<img src=nui://"..Config.img..QBCore.Shared.Items["carbon"].image.." width=30px>"..Loc[Config.Lan].info["carbon"], txt = Loc[Config.Lan].info["sell_all"].." "..Config.SellItems['carbon'].." "..Loc[Config.Lan].info["sell_each"], params = { event = "jim-mining:SellAnim", args = 'carbon' } }, 
+		{ header = "<img src=nui://"..Config.img..QBCore.Shared.Items["carbon"].image.." width=30px>"..Loc[Config.Lan].info["carbon"], txt = Loc[Config.Lan].info["sell_all"].." "..Config.SellItems['carbon'].." "..Loc[Config.Lan].info["sell_each"], params = { event = "jim-mining:SellAnim", args = 'carbon' } }, 	
 	})
 end)
 ------------------------
