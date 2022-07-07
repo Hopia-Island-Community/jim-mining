@@ -63,10 +63,10 @@ Config.RewardPool = {
 	[5] = "metalscrap",
 	[6] = "aluminumoxide",
 	[7] = "ironoxide",
-	[8] = 'uncut_ruby',
+	--[[ [8] = 'uncut_ruby',
 	[9] = 'uncut_emerald',
 	[10] = 'uncut_diamond',
-	[11] = 'uncut_sapphire',
+	[11] = 'uncut_sapphire', ]]
 }
 
 ------------------------------------------------------------
