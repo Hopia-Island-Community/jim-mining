@@ -89,24 +89,24 @@ CreateThread(function()
 	{ options = { { event = "jim-mining:CraftMenu", icon = "fas fa-certificate", label = Loc[Config.Lan].info["use_smelter"], craftable = Crafting.SmeltMenu }, },
 		distance = 10.0
 	})
-	--Ore Buyer
-	Targets["Buyer"] =
-	exports['qb-target']:AddCircleZone("Buyer", vector3(Config.Locations['Buyer'].location.x, Config.Locations['Buyer'].location.y, Config.Locations['Buyer'].location.z), 2.0, { name="Buyer", debugPoly=Config.Debug, useZ=true, }, 
-	{ options = { { event = "jim-mining:SellOre", icon = "fas fa-certificate", label = Loc[Config.Lan].info["sell_ores"], }, },
-		distance = 2.0
-	})
-	--Jewel Cutting Bench
-	Targets["JewelCut"] =
-	exports['qb-target']:AddCircleZone("JewelCut", vector3(Config.Locations['JewelCut'].location.x, Config.Locations['JewelCut'].location.y, Config.Locations['JewelCut'].location.z), 2.0,{ name="JewelCut", debugPoly=Config.Debug, useZ=true, }, 
-	{ options = { { event = "jim-mining:JewelCut", icon = "fas fa-certificate", label = Loc[Config.Lan].info["jewelcut"], }, },
-		distance = 2.0
-	})
-	--Jewel Buyer
-	Targets["JewelBuyer"] =
-	exports['qb-target']:AddCircleZone("JewelBuyer",vector3(Config.Locations['Buyer2'].location.x, Config.Locations['Buyer2'].location.y, Config.Locations['Buyer2'].location.z), 2.0, { name="JewelBuyer", debugPoly=Config.Debug, useZ=true, }, 
-	{ options = { { event = "jim-mining:JewelSell", icon = "fas fa-certificate", label = Loc[Config.Lan].info["jewelbuyer"], },	},
-		distance = 2.0
-	})
+	----Ore Buyer
+	--Targets["Buyer"] =
+	--exports['qb-target']:AddCircleZone("Buyer", vector3(Config.Locations['Buyer'].location.x, Config.Locations['Buyer'].location.y, Config.Locations['Buyer'].location.z), 2.0, { name="Buyer", debugPoly=Config.Debug, useZ=true, },
+	--{ options = { { event = "jim-mining:SellOre", icon = "fas fa-certificate", label = Loc[Config.Lan].info["sell_ores"], }, },
+	--	distance = 2.0
+	--})
+	----Jewel Cutting Bench
+	--Targets["JewelCut"] =
+	--exports['qb-target']:AddCircleZone("JewelCut", vector3(Config.Locations['JewelCut'].location.x, Config.Locations['JewelCut'].location.y, Config.Locations['JewelCut'].location.z), 2.0,{ name="JewelCut", debugPoly=Config.Debug, useZ=true, },
+	--{ options = { { event = "jim-mining:JewelCut", icon = "fas fa-certificate", label = Loc[Config.Lan].info["jewelcut"], }, },
+	--	distance = 2.0
+	--})
+	----Jewel Buyer
+	--Targets["JewelBuyer"] =
+	--exports['qb-target']:AddCircleZone("JewelBuyer",vector3(Config.Locations['Buyer2'].location.x, Config.Locations['Buyer2'].location.y, Config.Locations['Buyer2'].location.z), 2.0, { name="JewelBuyer", debugPoly=Config.Debug, useZ=true, },
+	--{ options = { { event = "jim-mining:JewelSell", icon = "fas fa-certificate", label = Loc[Config.Lan].info["jewelbuyer"], },	},
+	--	distance = 2.0
+	--})
 	--Cracking Bench
 	Targets["CrackingBench"] =
 	exports['qb-target']:AddCircleZone("CrackingBench", vector3(Config.Locations['Cracking'].location.x, Config.Locations['Cracking'].location.y, Config.Locations['Cracking'].location.z), 2.0, { name="CrackingBench", debugPoly=Config.Debug, useZ=true, }, 

@@ -157,13 +157,13 @@ Crafting.SmeltMenu = {
 	[4] = { ["aluminum"] = { ["aluminumoxide"] = 2, }, ['amount'] = 1 },
 	[5] = { ["iron"] 	 = { ["ironoxide"] = 2, }, ['amount'] = 1 },
 	[6] = { ["goldbar"]  = { ["goldore"] = 1 } },
-	[7] = { ["goldbar"]  = { ["gold_ring"] = 4 } },
+	--[7] = { ["goldbar"]  = { ["gold_ring"] = 4 } },
 }
 Crafting.GemCut = {
-	[1] = { ["emerald"]  = { ["uncut_emerald"]  = 1, } },
-	[2] = { ["diamond"]  = { ["uncut_diamond"]  = 1}, },
-	[3] = { ["ruby"] 	 = { ["uncut_ruby"] 	= 1 }, },
-	[4] = { ["sapphire"] = { ["uncut_sapphire"] = 1 }, },
+	--[1] = { ["emerald"]  = { ["uncut_emerald"]  = 1, } },
+	--[2] = { ["diamond"]  = { ["uncut_diamond"]  = 1}, },
+	--[3] = { ["ruby"] 	 = { ["uncut_ruby"] 	= 1 }, },
+	--[4] = { ["sapphire"] = { ["uncut_sapphire"] = 1 }, },
 }
 Crafting.RingCut = {
 	[1] = { ["gold_ring"] 	  = { ["goldbar"] 	= 1 }, ['amount'] = 3 },
