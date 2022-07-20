@@ -69,39 +69,39 @@ RegisterServerEvent('jim-mining:CrackReward', function()
 	end
 end)
 
-RegisterNetEvent("jim-mining:Selling", function(data)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-    local currentitem = data
-    if Player.Functions.GetItemByName(data) ~= nil then
-        local amount = Player.Functions.GetItemByName(data).amount
-        local pay = (amount * Config.SellItems[data])
-        Player.Functions.RemoveItem(data, amount)
-        Player.Functions.AddMoney('cash', pay)
-        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[data], 'remove', amount)
-    else
-        TriggerClientEvent("QBCore:Notify", src, Loc[Config.Lan].error["dont_have"].." "..QBCore.Shared.Items[data].label, "error")
-    end
-end)
+--RegisterNetEvent("jim-mining:Selling", function(data)
+--    local src = source
+--    local Player = QBCore.Functions.GetPlayer(src)
+--    local currentitem = data
+--    if Player.Functions.GetItemByName(data) ~= nil then
+--        local amount = Player.Functions.GetItemByName(data).amount
+--        local pay = (amount * Config.SellItems[data])
+--        Player.Functions.RemoveItem(data, amount)
+--        Player.Functions.AddMoney('cash', pay)
+--        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[data], 'remove', amount)
+--    else
+--        TriggerClientEvent("QBCore:Notify", src, Loc[Config.Lan].error["dont_have"].." "..QBCore.Shared.Items[data].label, "error")
+--    end
+--end)
 
-RegisterNetEvent("jim-mining:SellJewel", function(data)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-    local currentitem = data
-    if Player.Functions.GetItemByName(data) ~= nil then
-        local amount = Player.Functions.GetItemByName(data).amount
-        local pay = (amount * Config.SellItems[data])
-        Player.Functions.RemoveItem(data, amount)
-        Player.Functions.AddMoney('cash', pay)
-        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[data], 'remove', amount)
-    else
-        TriggerClientEvent("QBCore:Notify", src, Loc[Config.Lan].error["dont_have"].." "..QBCore.Shared.Items[data].label, "error")
-    end
-end)
+--RegisterNetEvent("jim-mining:SellJewel", function(data)
+--    local src = source
+--    local Player = QBCore.Functions.GetPlayer(src)
+--    local currentitem = data
+--    if Player.Functions.GetItemByName(data) ~= nil then
+--        local amount = Player.Functions.GetItemByName(data).amount
+--        local pay = (amount * Config.SellItems[data])
+--        Player.Functions.RemoveItem(data, amount)
+--        Player.Functions.AddMoney('cash', pay)
+--        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[data], 'remove', amount)
+--    else
+--        TriggerClientEvent("QBCore:Notify", src, Loc[Config.Lan].error["dont_have"].." "..QBCore.Shared.Items[data].label, "error")
+--    end
+--end)
 
 ----------------------------------------------
-
-QBCore.Functions.CreateCallback('jim-mining:Cutting:Check:Tools', function(source, cb)
-    local Player = QBCore.Functions.GetPlayer(source)
-	if Player.Functions.GetItemByName('handdrill') ~= nil and Player.Functions.GetItemByName('drillbit') ~= nil then cb(true) else cb(false) end
-end)
+--
+--QBCore.Functions.CreateCallback('jim-mining:Cutting:Check:Tools', function(source, cb)
+--    local Player = QBCore.Functions.GetPlayer(source)
+--	if Player.Functions.GetItemByName('handdrill') ~= nil and Player.Functions.GetItemByName('drillbit') ~= nil then cb(true) else cb(false) end
+--end)
