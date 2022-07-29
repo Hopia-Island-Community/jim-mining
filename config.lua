@@ -6,7 +6,7 @@ Config = {}
 Config = {
 	Debug = false, -- enable debug mode
 	Blips = true, -- Enable Blips?
-	BlipNamer = false, -- Enable to Name Blips different things, disable if you already have too many blips as this will group them together
+	BlipNamer = true, -- Enable to Name Blips different things, disable if you already have too many blips as this will group them together
 	PropSpawn = true, -- Enable Ore Props
 	Pedspawn = false, -- Do you want to spawn peds for main locations?
 	img = "qb-inventory/html/images/", --Set this to the image directory of your inventory script
@@ -17,7 +17,7 @@ Config = {
 Config.Locations =  {
 	['Mine'] = { name = "Mine", location = vector4(-594.96, 2091.3, 131.47-1.03, 67.65), blipTrue = true }, -- The location where you enter the mine 
 	['Quarry'] = { name = "Carrière", location = vector4(2960.9, 2754.14, 43.71-1.03, 204.58), blipTrue = true }, -- The location where you enter the mine
-	['Smelter'] = {	name = "Smelter", location = vector3(1112.29, -2009.9, 31.46), blipTrue = true }, -- The location of the smelter
+	['Smelter'] = {	name = "Fonderie", location = vector3(1112.29, -2009.9, 31.46), blipTrue = true }, -- The location of the smelter
 	['Cracking'] = { name = "Stone Cracking", location = vector4(1109.19, -1992.8, 30.98-1.03, 56.88), blipTrue = false }, -- The location of the smelter
 	['Buyer'] = { name = "Ore Buyer", location = vector4(1085.57, -2001.11, 31.4-1.03, 317.12), blipTrue = false }, -- The Location of the ore buyer
 	['JewelCut'] = { name = "Jewel Cutting", location = vector4(1077.11, -1984.22, 31.02-1.03, 55.8), blipTrue = false }, -- The Location of the jewel cutting bench. Couldn't decide so left in smeltery
@@ -157,7 +157,7 @@ Crafting.SmeltMenu = {
 	[4] = { ["aluminum"] = { ["aluminumoxide"] = 1, }, ['amount'] = 1 },
 	[5] = { ["iron"] 	 = { ["ironoxide"] = 2, }, ['amount'] = 1 },
 	[6] = { ["goldbar"]  = { ["goldore"] = 1 } },
-	[7] = { ["aluminum"]  = { ["fishingtin"] = 5 } },
+	[7] = { ["aluminum"]  = { ["fishingtin"] = 2 } },
 }
 Crafting.GemCut = {
 	--[1] = { ["emerald"]  = { ["uncut_emerald"]  = 1, } },
