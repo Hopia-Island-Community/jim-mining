@@ -151,7 +151,7 @@ items = {
 
 Crafting = {}
 Crafting.SmeltMenu = {
-	[1] = { ["copper"]   = { ["copperore"] = 1 }, ['amount'] = 4 },
+	[1] = { ["copper"]   = { ["copperore"] = 1 }, ['amount'] = 3 },
 	[2] = { ["iron"] 	 = { ["ironore"] = 1 } },
 	[3] = { ["steel"] 	 = { ["metalscrap"] = 2, ["carbon"] = 1 } },
 	[4] = { ["aluminum"] = { ["aluminumoxide"] = 1, }, ['amount'] = 1 },
