@@ -9,7 +9,7 @@ Config = {
 	BlipNamer = true, -- Enable to Name Blips different things, disable if you already have too many blips as this will group them together
 	PropSpawn = true, -- Enable Ore Props
 	Pedspawn = false, -- Do you want to spawn peds for main locations?
-	img = "qb-inventory/html/images/", --Set this to the image directory of your inventory script
+	img = "core_inventory/html/img/", --Set this to the image directory of your inventory script
 	Lan = "fr", -- Pick your language here
 }
 
@@ -71,36 +71,37 @@ Config.RewardPool = {
 
 ------------------------------------------------------------
 Config.SellItems = { -- Selling Prices
-	['copperore'] = 100,
-	['goldore'] = 100,
-	['ironore'] = 100,
-	['carbon'] = 100,
+	['water'] = 100,
+	--['copperore'] = 100,
+	--['goldore'] = 100,
+	--['ironore'] = 100,
+	--['carbon'] = 100,
+	--
+	--['goldbar'] = 100,
 	
-	['goldbar'] = 100,
-	
-	['uncut_emerald'] = 100,
-	['uncut_ruby'] = 100,
-	['uncut_diamond'] = 100,
-	['uncut_sapphire'] = 100,
+	--['uncut_emerald'] = 100,
+	--['uncut_ruby'] = 100,
+	--['uncut_diamond'] = 100,
+	--['uncut_sapphire'] = 100,
 
-	['emerald'] = 100,
-	['ruby'] = 100,
-	['diamond'] = 100,
-	['sapphire'] = 100,
+	--['emerald'] = 100,
+	--['ruby'] = 100,
+	--['diamond'] = 100,
+	--['sapphire'] = 100,
 
-	['diamond_ring'] = 1000,
-	['emerald_ring'] = 1000,
-	['ruby_ring'] = 1000,
-	['sapphire_ring'] = 1000,
+	--['diamond_ring'] = 1000,
+	--['emerald_ring'] = 1000,
+	--['ruby_ring'] = 1000,
+	--['sapphire_ring'] = 1000,
+	--
+	--['diamond_necklace'] = 1000,
+	--['emerald_necklace'] = 1000,
+	--['ruby_necklace'] = 1000,
+	--['sapphire_necklace'] = 1000,
 
-	['diamond_necklace'] = 1000,
-	['emerald_necklace'] = 1000,
-	['ruby_necklace'] = 1000,
-	['sapphire_necklace'] = 1000,
-
-	['gold_ring'] = 100,
-	['goldchain'] = 100,
-	['10kgoldchain'] = 100,
+	--['gold_ring'] = 100,
+	--['goldchain'] = 100,
+	--['10kgoldchain'] = 100,
 
 }
 

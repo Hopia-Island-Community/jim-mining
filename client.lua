@@ -128,41 +128,40 @@ RegisterNetEvent('jim-mining:openShop', function() TriggerServerEvent("inventory
 ------------------------------------------------------------
 -- Mine Ore Command / Animations
 
-function loadAnimDict(dict) while not HasAnimDictLoaded(dict) do RequestAnimDict(dict) Wait(5) end end 
+function loadAnimDict(dict) while not HasAnimDictLoaded(dict) do RequestAnimDict(dict) Wait(5) end end
 
-RegisterNetEvent('jim-mining:MineOre', function ()
-	local p = promise.new()	QBCore.Functions.TriggerCallback("QBCore:HasItem", function(cb) p:resolve(cb) end, "drill")
-	if Citizen.Await(p) then 
+RegisterNetEvent('jim-mining:MineOre', function()
+	if QBCore.Functions.HasItem("drill") then
 		RequestAmbientAudioBank("DLC_HEIST_FLEECA_SOUNDSET", 0)
 		RequestAmbientAudioBank("DLC_MPHEIST\\HEIST_FLEECA_DRILL", 0)
 		RequestAmbientAudioBank("DLC_MPHEIST\\HEIST_FLEECA_DRILL_2", 0)
 		soundId = GetSoundId()
 		local pos = GetEntityCoords(PlayerPedId())
 		loadAnimDict("anim@heists@fleeca_bank@drilling")
-		TaskPlayAnim(PlayerPedId(), 'anim@heists@fleeca_bank@drilling', 'drill_straight_idle' , 3.0, 3.0, -1, 1, 0, false, false, false)
+		TaskPlayAnim(PlayerPedId(), 'anim@heists@fleeca_bank@drilling', 'drill_straight_idle', 3.0, 3.0, -1, 1, 0, false, false, false)
 		local pos = GetEntityCoords(PlayerPedId(), true)
 		local DrillObject = CreateObject(`hei_prop_heist_drill`, pos.x, pos.y, pos.z, true, true, true)
-		AttachEntityToEntity(DrillObject, PlayerPedId(), GetPedBoneIndex(PlayerPedId(), 57005), 0.14, 0, -0.01, 90.0, -90.0, 180.0, true, true, false, true, 1, true)
-		PlaySoundFromEntity(soundId, "Drill", DrillObject, "DLC_HEIST_FLEECA_SOUNDSET", 1, 0)
-		QBCore.Functions.Progressbar("open_locker_drill", Loc[Config.Lan].info["drilling_ore"], math.random(10000,15000), false, true, {
-			disableMovement = true,	disableCarMovement = true, disableMouse = false, disableCombat = true, }, {}, {}, {}, function() -- Done
-			StopAnimTask(PlayerPedId(), "anim@heists@fleeca_bank@drilling", "drill_straight_idle", 1.0)
-			SetEntityAsMissionEntity(DrillObject)--nessesary for gta to even trigger DetachEntity
-			StopSound(soundId)
-			Wait(5)
-			DetachEntity(DrillObject, true, true)
-			Wait(5)
-			DeleteObject(DrillObject)
-			TriggerServerEvent('jim-mining:MineReward')
-			IsDrilling = false
-		end, function() -- Cancel
-			StopAnimTask(PlayerPedId(), "anim@heists@fleeca_bank@drilling", "drill_straight_idle", 1.0)
-			StopSound(soundId)
-			DetachEntity(DrillObject, true, true)
-			Wait(5)
-			DeleteObject(DrillObject)
-			IsDrilling = false
-		end)
+	AttachEntityToEntity(DrillObject, PlayerPedId(), GetPedBoneIndex(PlayerPedId(), 57005), 0.14, 0, -0.01, 90.0, -90.0, 180.0, true, true, false, true, 1, true)
+	PlaySoundFromEntity(soundId, "Drill", DrillObject, "DLC_HEIST_FLEECA_SOUNDSET", 1, 0)
+	QBCore.Functions.Progressbar("open_locker_drill", Loc[Config.Lan].info["drilling_ore"], math.random(10000, 15000), false, true, {
+	disableMovement = true, disableCarMovement = true, disableMouse = false, disableCombat = true, }, {}, {}, {}, function () -- Done
+	StopAnimTask(PlayerPedId(), "anim@heists@fleeca_bank@drilling", "drill_straight_idle", 1.0)
+	SetEntityAsMissionEntity(DrillObject)--nessesary for gta to even trigger DetachEntity
+	StopSound(soundId)
+	Wait(5)
+	DetachEntity(DrillObject, true, true)
+	Wait(5)
+		DeleteObject(DrillObject)
+		TriggerServerEvent('jim-mining:MineReward')
+		IsDrilling = false
+	end, function () -- Cancel
+	StopAnimTask(PlayerPedId(), "anim@heists@fleeca_bank@drilling", "drill_straight_idle", 1.0)
+	StopSound(soundId)
+	DetachEntity(DrillObject, true, true)
+		Wait(5)
+		DeleteObject(DrillObject)
+		IsDrilling = false
+		end )
 	else
 		TriggerEvent('QBCore:Notify', Loc[Config.Lan].error["no_drill"], 'error')
 	end
@@ -173,8 +172,7 @@ end)
 -- Cracking Command / Animations
 -- Command Starts here where it calls to being the stone inv checking
 RegisterNetEvent('jim-mining:CrackStart', function ()
-	local p = promise.new()	QBCore.Functions.TriggerCallback("QBCore:HasItem", function(cb) p:resolve(cb) end, "stone")
-	if Citizen.Await(p) then 
+	if QBCore.Functions.HasItem("drill") then
 		local pos = GetEntityCoords(PlayerPedId())
 		loadAnimDict('amb@prop_human_parking_meter@male@idle_a')
 		TaskPlayAnim(PlayerPedId(), 'amb@prop_human_parking_meter@male@idle_a', 'idle_a' , 3.0, 3.0, -1, 1, 0, false, false, false)
