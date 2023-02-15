@@ -172,7 +172,7 @@ end)
 -- Cracking Command / Animations
 -- Command Starts here where it calls to being the stone inv checking
 RegisterNetEvent('jim-mining:CrackStart', function ()
-	if QBCore.Functions.HasItem("drill") then
+	if QBCore.Functions.HasItem("stone") then
 		local pos = GetEntityCoords(PlayerPedId())
 		loadAnimDict('amb@prop_human_parking_meter@male@idle_a')
 		TaskPlayAnim(PlayerPedId(), 'amb@prop_human_parking_meter@male@idle_a', 'idle_a' , 3.0, 3.0, -1, 1, 0, false, false, false)
